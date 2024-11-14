@@ -1950,10 +1950,6 @@ class Connection
      */
     private function needsArrayParameterConversion(array $params, array $types): bool
     {
-        if (is_string(key($params))) {
-            return true;
-        }
-
         foreach ($types as $type) {
             if (
                 $type === ArrayParameterType::INTEGER
